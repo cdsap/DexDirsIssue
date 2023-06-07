@@ -27,8 +27,8 @@ jobs:
           java-version: ${{ matrix.java-version }}
       - name: Run build
         run: |  
-          ./gradlew clean :app:assembleDebug
-          ./gradlew :app:assembleDebug
+          ./gradlew clean :app:assembleDebug --info
+          ./gradlew :app:assembleDebug --info
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}          
 
